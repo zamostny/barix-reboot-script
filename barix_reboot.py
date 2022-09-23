@@ -1,0 +1,17 @@
+import urllib.request
+
+print("+"*63)
+print("="*20, "PAC Barix Reboot Tool", "="*20)
+print("+"*63)
+print("")
+print("Status 200 = GOOD")
+print("Status 404 = BAD")
+print("")
+print("Rebooting Lane 1")
+get_url= urllib.request.urlopen('http://10.54.212.81/rc.cgi?L=uirreboot.html&c=99')
+print("Response Status: "+ str(get_url.getcode()))
+print("")
+print("Rebooting Lane 2")
+get_url= urllib.request.urlopen('http://10.54.212.85/rc.cgi?L=uirreboot.html&c=99')
+print("Response Status: "+ str(get_url.getcode()))
+print("")
